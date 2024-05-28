@@ -70,7 +70,10 @@ export ZSH="$HOME/.oh-my-zsh"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# plugins=(git)
+plugins=(
+#   git
+  poetry
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,3 +110,15 @@ fi
 
 eval "$(starship init zsh)"
 export STARSHIP_CONFIG=$HOME/.config/starship.toml
+
+export PATH="$HOME/Library/Android/sdk/emulator:$PATH"
+
+
+# Created by `pipx` on 2023-11-03 20:31:45
+export PATH="$PATH:/Users/arthuralbarelli/.local/bin"
+
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/zulu-17.jdk/Contents/Home
+
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
