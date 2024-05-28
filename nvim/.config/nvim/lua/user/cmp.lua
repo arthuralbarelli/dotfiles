@@ -15,7 +15,7 @@ if not snip_status_ok then
 end
 
 require("luasnip/loaders/from_vscode").lazy_load()
-require("luasnip").filetype_extend("javascript", {"javascriptreact"})
+require("luasnip").filetype_extend("javascript", { "javascriptreact" })
 
 local check_backspace = function()
   local col = vim.fn.col "." - 1
@@ -51,7 +51,7 @@ cmp.setup({
         cmp.select_next_item()
       elseif luasnip.expandable() then
         luasnip.expand()
-        -- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable() 
+        -- You could replace the expand_or_jumpable() calls with expand_or_locally_jumpable()
         -- they way you will only jump inside the snippet region
       elseif luasnip.expand_or_jumpable() then
         luasnip.expand_or_jump()
@@ -85,7 +85,7 @@ cmp.setup({
     { name = 'luasnip' }, -- For luasnip users.
     { name = 'buffer' },
     { name = 'path' },
-    }),
+  }),
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
     select = false,
@@ -96,4 +96,3 @@ cmp.setup({
     },
   },
 })
-
