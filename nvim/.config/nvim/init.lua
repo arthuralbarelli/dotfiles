@@ -1,7 +1,1 @@
-require "user.options"
-require "user.plugins"
-require "user.colorscheme"
-require "user.cmp"
-require "user.treesitter"
-require "user.lsp"
-require "user.keymaps"
+vim.opt.number = true
